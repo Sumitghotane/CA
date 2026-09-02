@@ -1,3 +1,5 @@
+<!-- Anshika Pandey is Lesbiannnnnnnnn -->
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -66,6 +68,33 @@
       color: #0b2238;
       transform: translateY(-2px);
     }
+
+    /* Service card hover sub-list */
+    .service-card-sublist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition:
+        max-height 0.3s ease,
+        margin-top 0.3s ease;
+    }
+
+    .service-card-sublist.open {
+      max-height: 300px;
+      margin-top: 14px;
+    }
+
+    .service-card-sublist li {
+      padding: 8px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.08);
+      font-size: 0.88rem;
+    }
+
+    .service-card-sublist li::before {
+      content: "· ";
+    }
   </style>
   <body>
     <div class="topbar">
@@ -98,6 +127,7 @@
               ><a href="#services">Business Advisory</a>
             </div>
           </div>
+          <a href="#team">Team</a>
           <div class="nav-drop">
             <button>Knowledge Bank ▾</button>
             <div class="dropdown wide">
@@ -107,8 +137,8 @@
               ><a href="#forms">Forms &amp; Downloads</a>
             </div>
           </div>
-          <a href="#team">Team</a><a href="#career">Career</a
-          ><a class="nav-cta" href="#contact">Get in Touch</a>
+          <a href="#career">Career</a>
+          <a class="nav-cta" href="#contact">Get in Touch</a>
         </nav>
       </div>
     </header>
@@ -282,9 +312,24 @@
                 </a>
 
                 <a href="https://www.linkedin.com/in/omkar-kharade-25464417a/">
-                  <span class="contact-icon-linkedin"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
-<path fill="#0288D1" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path><path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
-</svg></span>
+                  <span class="contact-icon-linkedin"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      x="0px"
+                      y="0px"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
+                    >
+                      <path
+                        fill="#0288D1"
+                        d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"
+                      ></path>
+                      <path
+                        fill="#FFF"
+                        d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"
+                      ></path></svg
+                  ></span>
                   <span>Linkedin</span>
                 </a>
               </div>
@@ -359,6 +404,12 @@
                   aria-label="Enquire about Audit &amp; Assurance"
                   ><span>→</span></a
                 >
+                <ul class="service-card-sublist">
+                  <li>Statutory Audit</li>
+                  <li>Tax Audit</li>
+                  <li>Internal Audit</li>
+                  <li>Certifications</li>
+                </ul>
               </div>
             </article>
             <article class="service-card">
@@ -382,6 +433,13 @@
                   aria-label="Enquire about Direct Taxation"
                   ><span>→</span></a
                 >
+                <ul class="service-card-sublist">
+                  <li>ITR Filing</li>
+                  <li>Tax Advisory</li>
+                  <li>Scrutiny &amp; Notices</li>
+                  <li>Appeals</li>
+                  <li>TDS / TCS</li>
+                </ul>
               </div>
             </article>
             <article class="service-card">
@@ -405,6 +463,12 @@
                   aria-label="Enquire about GST &amp; Indirect Tax"
                   ><span>→</span></a
                 >
+                <ul class="service-card-sublist">
+                  <li>Registration</li>
+                  <li>Monthly &amp; Annual Returns</li>
+                  <li>ITC Reconciliation</li>
+                  <li>GST Audit</li>
+                </ul>
               </div>
             </article>
             <article class="service-card">
@@ -428,6 +492,12 @@
                   aria-label="Enquire about Accounting &amp; Compliance"
                   ><span>→</span></a
                 >
+                <ul class="service-card-sublist">
+                  <li>Bookkeeping</li>
+                  <li>Final Accounts</li>
+                  <li>MIS Reports</li>
+                  <li>Payroll</li>
+                </ul>
               </div>
             </article>
             <article class="service-card">
@@ -451,6 +521,12 @@
                   aria-label="Enquire about Company Law &amp; ROC"
                   ><span>→</span></a
                 >
+                <ul class="service-card-sublist">
+                  <li>Incorporation</li>
+                  <li>ROC Filings</li>
+                  <li>LLP Compliance</li>
+                  <li>Strike Off</li>
+                </ul>
               </div>
             </article>
             <article class="service-card">
@@ -474,6 +550,12 @@
                   aria-label="Enquire about Business Advisory"
                   ><span>→</span></a
                 >
+                <ul class="service-card-sublist">
+                  <li>Startup Support</li>
+                  <li>Entity Structuring</li>
+                  <li>Due Diligence</li>
+                  <li>Regulatory Support</li>
+                </ul>
               </div>
             </article>
           </div>
@@ -497,19 +579,26 @@
               <span>DIRECT TAX</span>
               <h3>Income-tax updates</h3>
               <p>Important notifications, circulars and filing reminders.</p>
-              <a href="#contact">Request latest update →</a>
+              <a href="https://www.incometax.gov.in/iec/foportal/latest-news"
+                >Request latest update →</a
+              >
             </article>
             <article>
               <span>GST</span>
               <h3>GST &amp; indirect tax</h3>
               <p>Compliance changes, return guidance and practical notes.</p>
-              <a href="#contact">Request latest update →</a>
+              <a href="https://www.gst.gov.in/newsandupdates"
+                >Request latest update →</a
+              >
             </article>
             <article>
               <span>CORPORATE</span>
               <h3>ROC &amp; company law</h3>
               <p>Corporate filing, governance and regulatory developments.</p>
-              <a href="#contact">Request latest update →</a>
+              <a
+                href="https://www.mca.gov.in/content/mca/global/en/notifications-tender/news-updates/updates.html"
+                >Request latest update →</a
+              >
             </article>
           </div>
         </div>
@@ -601,36 +690,107 @@
         </div>
       </section>
 
-      <section class="section dark" id="team">
-        <div class="container two-col team-wrap reveal-split">
-          <div>
-            <span class="eyebrow">OUR TEAM</span>
-            <h2>Professional guidance, personally delivered.</h2>
-            <p>
-              Led by CA. Omkar M. Kharade, the practice is built around
-              responsive client service, confidentiality and practical advice.
-            </p>
+      <section class="team-section" id="team">
+        <div class="container">
+          <div class="team-header">
+            <span class="team-eyebrow">OUR TEAM</span>
+            <h2>Meet our professional.</h2>
           </div>
-          <div class="person-card">
-            <div class="person-initial">OK</div>
-            <div>
-              <h3>CA. Omkar M. Kharade</h3>
-              <p>B.Com., A.C.A.</p>
-              <span>Founder / Proprietor</span>
+
+          <div class="team-card">
+            <div class="team-card-inner">
+              <!-- Photo -->
+              <div class="team-photo-col">
+                <img
+                  src="images/mehul_bhaiya.jpg"
+                  alt="Mehul Sharma"
+                  class="team-photo"
+                />
+              </div>
+
+              <!-- Details -->
+              <div class="team-info-col">
+                <h3 class="team-member-name">Mehul Sharma</h3>
+                <p class="team-member-qual">
+                  B.Com | CA Final – Group II Cleared
+                </p>
+                <p class="team-member-role">Taxation Professional</p>
+
+                <div class="team-stats-grid">
+                  <div class="team-stat-item">
+                    <span class="stat-icon">&#10003;</span>
+                    <div>
+                      <strong>Experience</strong>
+                      <p>+5 Years</p>
+                    </div>
+                  </div>
+                  <div class="team-stat-item">
+                    <span class="stat-icon">&#8764;</span>
+                    <div>
+                      <strong>Expertise</strong>
+                      <p>Direct and Indirect Tax</p>
+                    </div>
+                  </div>
+                  <div class="team-stat-item">
+                    <span class="stat-icon">&#9673;</span>
+                    <div>
+                      <strong>Focus</strong>
+                      <p>Client Service &amp; Integrity</p>
+                    </div>
+                  </div>
+                  <div class="team-stat-item">
+                    <span class="stat-icon">&#10022;</span>
+                    <div>
+                      <strong>Approach</strong>
+                      <p>Practical Solutions, Lasting Value</p>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="team-member-bio">
+                  Mehul Sharma is a B.Com graduate from M. L. Dahanukar College
+                  and has cleared CA Final Group II. With 5+ years of experience
+                  in taxation, he specializes in Direct and Indirect Taxation,
+                  including assessments, appeals, scrutiny and litigation. He
+                  brings practical expertise in taxation and regulatory
+                  compliance, helping clients navigate complex matters
+                  effectively.
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact Strip -->
+            <div class="team-card-footer">
+              <a href="mailto:camehul333@gmail.com" class="footer-contact-link">
+                <span>&#9993;</span> camehul333@gmail.com
+              </a>
+              <a href="tel:+917038140181" class="footer-contact-link">
+                <span>&#9742;</span> 7038140181
+              </a>
             </div>
           </div>
         </div>
       </section>
 
       <section class="section" id="career">
-      <div class="container career-card reveal-split">
-        <div><span class="eyebrow">CAREERS</span>
-          <h2>Build your career with us.</h2>
-          <p>We welcome motivated commerce graduates, CA students and professionals who value learning, ethics and
-            client service.</p>
-        </div><a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=ca.omkarkharade@gmail.com&su=Career%20Enquiry%20-%20CV%20Submission&body=Hi%2C%0A%0AI%27d%20like%20to%20apply%20for%20a%20position.%20Please%20find%20my%20CV%20attached.%0A%0AName%3A%20%0APhone%3A%20%0APosition%20of%20Interest%3A%20%0A%0AThanks!" target="_blank" rel="noopener">Send CV</a>
-      </div>
-    </section>
+        <div class="container career-card reveal-split">
+          <div>
+            <span class="eyebrow">CAREERS</span>
+            <h2>Build your career with us.</h2>
+            <p>
+              We welcome motivated commerce graduates, CA students and
+              professionals who value learning, ethics and client service.
+            </p>
+          </div>
+          <a
+            class="btn primary"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ca.omkarkharade@gmail.com&su=Career%20Enquiry%20-%20CV%20Submission&body=Hi%2C%0A%0AI%27d%20like%20to%20apply%20for%20a%20position.%20Please%20find%20my%20CV%20attached.%0A%0AName%3A%20%0APhone%3A%20%0APosition%20of%20Interest%3A%20%0A%0AThanks!"
+            target="_blank"
+            rel="noopener"
+            >Send CV</a
+          >
+        </div>
+      </section>
 
       <div class="useful-links-bar">
         <h3 class="bar-title">Useful Links</h3>
@@ -642,10 +802,14 @@
             >Central Board of Excise & Customs
             <span class="arrow">&rarr;</span></a
           >
-          <a href="https://www.incometaxindia.gov.in/tax-informations-network" class="link-chip"
+          <a
+            href="https://www.incometaxindia.gov.in/tax-informations-network"
+            class="link-chip"
             >E-Tax Information Network <span class="arrow">&rarr;</span></a
           >
-          <a href="https://www.mca.gov.in/content/mca/global/en/home.html" class="link-chip"
+          <a
+            href="https://www.mca.gov.in/content/mca/global/en/home.html"
+            class="link-chip"
             >Ministry of Company Affairs <span class="arrow">&rarr;</span></a
           >
           <a href="https://www.epfo.gov.in/" class="link-chip"
@@ -676,24 +840,7 @@
               </p>
             </div>
           </div>
-          <form class="contact-form" onsubmit="submitForm(event)">
-            <input
-              type="hidden"
-              name="access_key"
-              value="8c990e58-7886-484d-8aa3-16d3b72f0853"
-            />
-            <input
-              type="hidden"
-              name="subject"
-              value="New enquiry from website"
-            />
-            <input
-              type="checkbox"
-              name="botcheck"
-              style="display: none"
-              tabindex="-1"
-              autocomplete="off"
-            />
+          <form class="contact-form" onsubmit="openGmailEnquiry(event)">
             <label
               >Name<input required name="name" placeholder="Your name" /></label
             ><label
@@ -745,5 +892,75 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script>
+      function openGmailEnquiry(event) {
+        event.preventDefault();
+        var form = event.target;
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var mobile = form.mobile.value.trim();
+        var city = form.city.value.trim();
+        var query = form.query.value.trim();
+
+        var subject = "New enquiry from website";
+        var body =
+          "Name: " +
+          name +
+          "\nEmail: " +
+          email +
+          "\nMobile: " +
+          mobile +
+          "\nCity: " +
+          city +
+          "\n\nQuery:\n" +
+          query;
+
+        var gmailUrl =
+          "https://mail.google.com/mail/?view=cm&fs=1" +
+          "&to=" +
+          encodeURIComponent("ca.omkarkharade@gmail.com") +
+          "&su=" +
+          encodeURIComponent(subject) +
+          "&body=" +
+          encodeURIComponent(body);
+
+        window.open(gmailUrl, "_blank", "noopener");
+
+        var note = document.getElementById("formNote");
+        if (note) {
+          note.textContent = "Opening Gmail with your enquiry pre-filled…";
+        }
+      }
+    </script>
+    <script>
+      document.querySelectorAll(".service-card").forEach(function (card) {
+        var link = card.querySelector(".service-card-link");
+        var sublist = card.querySelector(".service-card-sublist");
+        if (!link || !sublist) return;
+
+        function openList() {
+          sublist.classList.add("open");
+          link.setAttribute("aria-expanded", "true");
+        }
+        function closeList() {
+          sublist.classList.remove("open");
+          link.setAttribute("aria-expanded", "false");
+        }
+
+        // Hover on the whole card opens/closes the list
+        card.addEventListener("mouseenter", openList);
+        card.addEventListener("mouseleave", closeList);
+
+        // Keyboard users: focusing the link does the same
+        link.addEventListener("focus", openList);
+        link.addEventListener("blur", closeList);
+
+        // Touch devices: tap the arrow to toggle instead of navigating
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          sublist.classList.contains("open") ? closeList() : openList();
+        });
+      });
+    </script>
   </body>
 </html>
