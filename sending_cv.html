@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Career Application — Send Your CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #14202b;
+    --muted: #667482;
+    --navy: #0d2740;
+    --blue: #1d5d8f;
+    --gold: #c79b49;
+    --paper: #f8f7f3;
+    --line: #dfe5e9;
+    --white: #fff;
+    --shadow: 0 18px 50px rgba(13, 39, 64, .10);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    font-family: "DM Sans", Arial, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 640px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid var(--line);
+  }
+
+  .card-header {
+    background: var(--navy);
+    color: var(--white);
+    padding: 36px 40px;
+  }
+
+  .eyebrow {
+    display: inline-block;
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .card-header h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 30px;
+    margin: 0 0 8px;
+  }
+
+  .card-header p {
+    margin: 0;
+    color: rgba(255,255,255,.75);
+    font-size: 14.5px;
+    line-height: 1.6;
+  }
+
+  form {
+    padding: 32px 40px 40px;
+  }
+
+  label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    margin-top: 20px;
+  }
+
+  label:first-of-type { margin-top: 0; }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14.5px;
+    color: var(--ink);
+    background: var(--paper);
+    transition: border-color .15s ease, box-shadow .15s ease;
+  }
+
+  input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--blue);
+    box-shadow: 0 0 0 3px rgba(29, 93, 143, .12);
+  }
+
+  textarea { resize: vertical; min-height: 100px; }
+
+  .file-drop {
+    border: 1.5px dashed var(--line);
+    border-radius: 8px;
+    padding: 18px 14px;
+    text-align: center;
+    background: var(--paper);
+    cursor: pointer;
+    transition: border-color .15s ease, background .15s ease;
+  }
+
+  .file-drop:hover { border-color: var(--blue); }
+
+  .file-drop input[type="file"] { display: none; }
+
+  .file-drop-label {
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+
+  .file-drop-label strong { color: var(--blue); }
+
+  .file-name {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    display: none;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    margin-top: 28px;
+    background: var(--gold);
+    color: var(--navy);
+    border: none;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: filter .15s ease, transform .1s ease;
+  }
+
+  button[type="submit"]:hover { filter: brightness(1.05); }
+  button[type="submit"]:active { transform: translateY(1px); }
+  button[type="submit"]:disabled { opacity: .65; cursor: not-allowed; }
+
+  .form-note {
+    margin-top: 16px;
+    font-size: 13.5px;
+    text-align: center;
+    min-height: 18px;
+  }
+
+  .form-note.success { color: #1a7a4c; }
+  .form-note.error { color: #b3261e; }
+
+  .required { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-header">
+    <span class="eyebrow">Careers</span>
+    <h1>Send Us Your CV</h1>
+    <p>We welcome motivated commerce graduates, CA students and professionals who value learning, ethics and client service. Fill in the form below and attach your resume — we'll get back to you soon.</p>
+  </div>
+
+  <form id="cvForm">
+    <input type="hidden" name="access_key" value="8c990e58-7886-484d-8aa3-16d3b72f0853">
+    <input type="hidden" name="subject" value="New CV / Career Enquiry from Website">
+    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+
+    <label for="name">Full Name <span class="required">*</span></label>
+    <input type="text" id="name" name="name" placeholder="Your full name" required>
+
+    <label for="email">Email Address <span class="required">*</span></label>
+    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" name="phone" placeholder="+91">
+
+    <label for="role">Position of Interest</label>
+    <input type="text" id="role" name="role" placeholder="e.g. Article Assistant, Accountant">
+
+    <label for="message">A Bit About You</label>
+    <textarea id="message" name="message" placeholder="Qualifications, experience, availability..."></textarea>
+
+    <label for="resume">Attach Your CV <span class="required">*</span></label>
+    <div class="file-drop" id="fileDrop">
+      <input type="file" id="resume" name="attachment" accept=".pdf,.doc,.docx" required>
+      <div class="file-drop-label"><strong>Click to upload</strong> your resume (PDF or Word)</div>
+      <div class="file-name" id="fileName"></div>
+    </div>
+
+    <button type="submit" id="submitBtn">Send CV</button>
+    <p class="form-note" id="formNote"></p>
+  </form>
+</div>
+
+<script>
+  const fileDrop = document.getElementById('fileDrop');
+  const fileInput = document.getElementById('resume');
+  const fileNameEl = document.getElementById('fileName');
+
+  fileDrop.addEventListener('click', () => fileInput.click());
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length) {
+      fileNameEl.textContent = fileInput.files[0].name;
+      fileNameEl.style.display = 'block';
+    } else {
+      fileNameEl.style.display = 'none';
+    }
+  });
+
+  const form = document.getElementById('cvForm');
+  const noteEl = document.getElementById('formNote');
+  const btn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const accessKey = form.querySelector('input[name="access_key"]').value;
+    if (!accessKey) {
+      noteEl.textContent = 'Form is not fully configured yet — please add a Web3Forms access key.';
+      noteEl.className = 'form-note error';
+      return;
+    }
+
+    const data = new FormData(form);
+    const originalBtnText = btn.textContent;
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    noteEl.textContent = '';
+    noteEl.className = 'form-note';
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    })
+    .then(res => res.json())
+    .then(result => {
+      if (result.success) {
+        noteEl.textContent = 'Thank you! Your CV has been sent. We\'ll be in touch soon.';
+        noteEl.className = 'form-note success';
+        form.reset();
+        fileNameEl.style.display = 'none';
+      } else {
+        noteEl.textContent = 'Something went wrong while sending your CV. Please try again or email us directly.';
+        noteEl.className = 'form-note error';
+      }
+    })
+    .catch(() => {
+      noteEl.textContent = 'Something went wrong while sending your CV. Please try again or email us directly.';
+      noteEl.className = 'form-note error';
+    })
+    .finally(() => {
+      btn.disabled = false;
+      btn.textContent = originalBtnText;
+    });
+  });
+</script>
+
+</body>
+</html>
